@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+  name: hellobackenddeployment
+  labels:
+    app: hello
+    tier: backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hello
+      tier: backend
+  template:
+    metadata:
+      labels:
+        app: hello
+        tier: backend
+      name: hellobackendpod
+      namespace: default
+    spec:
+      containers:
+      - name: hellobackendcontainer
+        image: docker.io/library/restapphello:2.0

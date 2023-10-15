@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+  name: hellofrontenddeployment
+  labels:
+    tier: frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hello
+      tier: frontend
+  template:
+    metadata:
+      labels:
+        app: hello
+        tier: frontend
+      name: hellofrontendpod
+      namespace: default
+    spec:
+      containers:
+      - name: hellofrontendcontainer
+        image: docker.io/library/hellofrontend:14.0
