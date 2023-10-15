@@ -1,16 +1,16 @@
 # podcomm
 Communication between 2 pods - https://github.com/nvaibhav/podcomm.git
-This repo has contents developed and deployed on minikube for 2 pods communication.
-First pod is frontend with a reactjs app with nginx.
-Second pod is Backend with java RestAPI with tomcat.
+This repo has contents developed and deployed on minikube for 2 pods communication.  
+First pod is frontend with a reactjs app with nginx.  
+Second pod is Backend with java RestAPI with tomcat.  
 
-Below are the details of the contents of the repo -
-back-end/ - Folder containing artifacts to create a image for backend pod
-front-end/ - Folder containing artifacts to create a image for frontend pod.
-reactapphello/ - Folder containing a react project in VSC IDE.
-restapphello/ - Folder containing a java project in STS.
+Below are the details of the contents of the repo -  
+back-end/ - Folder containing artifacts to create a image for backend pod  
+front-end/ - Folder containing artifacts to create a image for frontend pod.  
+reactapphello/ - Folder containing a react project in VSC IDE.  
+restapphello/ - Folder containing a java project in STS.  
 
-Steps to deploy in minikube (Windows):
+Steps to deploy in minikube (Windows):  
 Set the ENV vars -  
 minikube docker-env gives below cmds, execute one by one in cmd  
   SET DOCKER_TLS_VERIFY=1  
