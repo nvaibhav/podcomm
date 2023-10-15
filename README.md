@@ -20,29 +20,30 @@ minikube docker-env gives below cmds, execute one by one in cmd
   REM To point your shell to minikube's docker-daemon, run:  
   REM @FOR /f "tokens=*" %i IN ('minikube -p minikube docker-env --shell cmd') DO @%i  
 
-Frontend
-------------
-Build the project to create /build in VSC
-  npm run build
-Copy the build to image artifacts -
-  C:\mycode\front-end>XCOPY C:\Users\[user]\Documents\personal\training\reactapphello\reactapphello\build .\frontend-build\ /E
-Create the image
-  C:\mycode\front-end>minikube image build -t hellofrontend:2.0 .
-  C:\mycode\back-end>kubectl apply -f .\hellofrontenddeployment.yaml
-  C:\mycode\back-end>kubectl apply -f .\hellofrontendservice.yaml
+Frontend  
+------------  
+Build the project to create /build in VSC  
+  npm run build  
+Copy the build to image artifacts -  
+  C:\mycode\front-end>XCOPY C:\Users\[user]\Documents\personal\training\reactapphello\reactapphello\build .\frontend-build\ /E  
+Create the image  
+  C:\mycode\front-end>minikube image build -t hellofrontend:2.0 .  
+  C:\mycode\back-end>kubectl apply -f .\hellofrontenddeployment.yaml  
+  C:\mycode\back-end>kubectl apply -f .\hellofrontendservice.yaml  
 
-Backend
-------------
-Build the project to create the jar from STS
-  mvn package
-Copy the build to image artifacts -
-  XCOPY C:\Users\[user]\Documents\personal\training\restapphello\target\*.jar .\back-end\backend-build
-Create the image
-  minikube image build -t restapphello:2.0 .
-Redeploy
-  C:\mycode\back-end>kubectl apply -f .\hellobackenddeployment.yaml
-  C:\mycode\back-end>kubectl apply -f .\hellobackendservice.yaml
+Backend  
+------------  
+Build the project to create the jar from STS  
+  mvn package  
+Copy the build to image artifacts -  
+  XCOPY C:\Users\[user]\Documents\personal\training\restapphello\target\*.jar .\back-end\backend-build  
+Create the image  
+  minikube image build -t restapphello:2.0 .  
+Redeploy  
+  C:\mycode\back-end>kubectl apply -f .\hellobackenddeployment.yaml  
+  C:\mycode\back-end>kubectl apply -f .\hellobackendservice.yaml  
 
-Troubleshooting
-  kubectl exec -i -t hellofrontenddeployment-6fd87c7f69-76sxs – sh
-  kubectl cp hellofrontenddeployment-85c5cb4999-r4vlw:/etc/nginx/conf.d/mynginx.conf .\nginx.conf
+Troubleshooting  
+  kubectl exec -i -t hellofrontenddeployment-6fd87c7f69-76sxs – sh  
+  kubectl cp hellofrontenddeployment-85c5cb4999-r4vlw:/etc/nginx/conf.d/mynginx.conf .\nginx.conf  
+  
