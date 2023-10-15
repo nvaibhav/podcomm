@@ -11,14 +11,14 @@ reactapphello/ - Folder containing a react project in VSC IDE.
 restapphello/ - Folder containing a java project in STS.
 
 Steps to deploy in minikube (Windows):
-Set the ENV vars -
-minikube docker-env gives below cmds, execute one by one in cmd
-  SET DOCKER_TLS_VERIFY=1
-  SET DOCKER_HOST=tcp://127.0.0.1:62194
-  SET DOCKER_CERT_PATH=C:\Users\[user]\.minikube\certs
-  SET MINIKUBE_ACTIVE_DOCKERD=minikube
-  REM To point your shell to minikube's docker-daemon, run:
-  REM @FOR /f "tokens=*" %i IN ('minikube -p minikube docker-env --shell cmd') DO @%i
+Set the ENV vars -  
+minikube docker-env gives below cmds, execute one by one in cmd  
+  SET DOCKER_TLS_VERIFY=1  
+  SET DOCKER_HOST=tcp://127.0.0.1:62194  
+  SET DOCKER_CERT_PATH=C:\Users\[user]\.minikube\certs  
+  SET MINIKUBE_ACTIVE_DOCKERD=minikube  
+  REM To point your shell to minikube's docker-daemon, run:  
+  REM @FOR /f "tokens=*" %i IN ('minikube -p minikube docker-env --shell cmd') DO @%i  
 
 Frontend
 ------------
